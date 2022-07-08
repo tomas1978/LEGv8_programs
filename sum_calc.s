@@ -26,5 +26,6 @@ loop_add:
 	LDUR	x6, [x5]
 	ADD	x2, x2, x6
 	ADDI	x3, x3, #1	//increment counter
+	ADDI	x5, x5, #8	//increment memory address
 	CMP	x3, x4
-	BL	loop_add
+	B.NE	loop_add
